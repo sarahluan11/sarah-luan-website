@@ -1,0 +1,327 @@
+/* Additional styles for individual pages */
+
+.home-link {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.home-link:hover {
+    opacity: 0.8;
+}
+
+/* Art Page Styles */
+.art-header {
+    text-align: left;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.art-title {
+    font-size: 3rem;
+    color: var(--art-text);
+    margin-bottom: 1rem;
+    font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+.art-navigation {
+    margin-bottom: 1.5rem;
+    font-family: 'Fredoka', 'Arial', sans-serif;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    color: var(--art-text);
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active {
+    color: var(--art-highlight);
+}
+
+.nav-item:hover {
+    color: var(--art-highlight);
+}
+
+.nav-separator {
+    margin: 0 0.5rem;
+    color: var(--art-text);
+}
+
+.art-description {
+    font-size: 1rem;
+    color: var(--art-highlight);
+    line-height: 1.6;
+    font-family: 'Glacial Indifference', 'Arial', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.art-link {
+    color: var(--art-highlight);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.art-link:hover {
+    color: var(--art-text);
+}
+
+.art-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+}
+
+.art-item {
+    aspect-ratio: 4/3;
+}
+
+.art-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Work Page Styles */
+.work-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.work-title {
+    font-size: 3rem;
+    color: var(--work-text);
+    margin-bottom: 1rem;
+    font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+.work-navigation {
+    font-family: 'Fredoka', 'Arial', sans-serif;
+}
+
+.work-navigation .nav-item {
+    color: var(--work-text);
+}
+
+.work-navigation .nav-item.active {
+    color: var(--work-highlight);
+}
+
+.work-navigation .nav-item:hover {
+    color: var(--work-highlight);
+}
+
+.work-navigation .nav-separator {
+    color: var(--work-text);
+}
+
+.work-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--work-text);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    color: var(--work-text);
+    margin-bottom: 0.5rem;
+    font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+.project-details {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-family: 'Glacial Indifference', 'Arial', sans-serif;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: 'Glacial Indifference', 'Arial', sans-serif;
+}
+
+.project-button {
+    background-color: var(--work-highlight);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Fredoka', 'Arial', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: var(--work-text);
+}
+
+.project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-placeholder {
+    width: 200px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+}
+
+/* About Page Styles */
+.about-header {
+    text-align: right;
+    margin-bottom: 3rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: var(--about-text);
+    font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+.about-content {
+    /* Content styles will be added as needed */
+}
+
+.page-content {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+.page-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Fredoka', 'Arial', sans-serif;
+}
+
+.content-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.content-placeholder {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-placeholder h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Fredoka', 'Arial', sans-serif;
+}
+
+.content-placeholder p {
+    color: #666;
+    line-height: 1.6;
+    font-family: 'Glacial Indifference', 'Arial', sans-serif;
+}
+
+/* Responsive adjustments for pages */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 2rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-description {
+        font-size: 1rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Art page responsive */
+    .art-title {
+        font-size: 2.5rem;
+    }
+    
+    .art-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Work page responsive */
+    .work-title {
+        font-size: 2.5rem;
+    }
+    
+    .project-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-text {
+        order: 1;
+    }
+    
+    .project-image {
+        order: 2;
+    }
+    
+    /* About page responsive */
+    .about-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}

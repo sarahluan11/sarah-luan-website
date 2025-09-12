@@ -1,0 +1,392 @@
+/* Custom Font Imports */
+@font-face {
+    font-family: 'Intro Rust';
+    src: url('fonts/IntroRust.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('fonts/Fredoka-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Color Palette Variables */
+:root {
+    /* Art Colors */
+    --art-text: #eb7951;
+    --art-highlight: #8e0000;
+    --art-background: #ffe2d9;
+    
+    /* Work Colors */
+    --work-text: #62ae5c;
+    --work-highlight: #247130;
+    --work-background: #f1ffef;
+    
+    /* About Colors */
+    --about-text: #1e88ae;
+    --about-highlight: #15546f;
+    --about-background: #dff1ff;
+    
+    /* General */
+    --main-background: #f5f5dc;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Glacial Indifference', 'Arial', 'Helvetica', sans-serif;
+    background-color: #f5f5dc; /* Light creamy beige background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+.sarah {
+    color: var(--art-text);
+}
+
+.luan {
+    color: var(--work-text);
+}
+
+.titles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Fredoka', 'Arial', sans-serif;
+}
+
+.software {
+    color: var(--art-text);
+}
+
+.product-design {
+    color: var(--work-text);
+}
+
+.consulting {
+    color: var(--about-text);
+}
+
+.separator {
+    color: #666;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.circles-container {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Circle Links */
+.circle-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.circle-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Circle Styles */
+.circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.circle:hover::before {
+    opacity: 1;
+}
+
+.circle-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.figurine {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Ensure consistent sizing for all figurines */
+.circle-content img {
+    width: 90% !important;
+    height: 90% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* Specific styling for about me image to ensure it appears larger */
+.about-circle .figurine {
+    width: 95% !important;
+    height: 95% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: scale(1.1);
+}
+
+/* Art Circle */
+.art-circle::before {
+    box-shadow: 0 0 30px 10px rgba(235, 121, 81, 0.6);
+}
+
+/* Work Circle */
+.work-circle::before {
+    box-shadow: 0 0 30px 10px rgba(98, 174, 92, 0.6);
+}
+
+/* About Circle */
+.about-circle::before {
+    box-shadow: 0 0 30px 10px rgba(30, 136, 174, 0.6);
+}
+
+/* Circle Labels */
+.circle-label {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.art-circle + .circle-label {
+    color: var(--art-text);
+}
+
+.work-circle + .circle-label {
+    color: var(--work-text);
+}
+
+.about-circle + .circle-label {
+    color: var(--about-text);
+}
+
+.circle-link:hover .circle-label {
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.social-link {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%) brightness(0.7);
+    transition: filter 0.3s ease;
+    object-fit: contain;
+}
+
+.social-link:hover .social-icon {
+    filter: grayscale(0%) brightness(1);
+}
+
+/* Make GitHub logo bigger */
+.social-link:first-child .social-icon {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem 2rem;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .titles {
+        font-size: 1rem;
+    }
+    
+    .circles-container {
+        gap: 3rem;
+        flex-direction: column;
+    }
+    
+    .circle {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .social-links {
+        gap: 2rem;
+    }
+    
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    /* Keep GitHub logo bigger on tablet */
+    .social-link:first-child .social-icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+    }
+    
+    .titles {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .circle {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Keep GitHub logo bigger on mobile */
+    .social-link:first-child .social-icon {
+        width: 46px !important;
+        height: 46px !important;
+    }
+    
+    .circle-label {
+        font-size: 1rem;
+    }
+}
+
+/* Page-specific background colors */
+body.art-page {
+    background-color: var(--art-background);
+}
+
+body.work-page {
+    background-color: var(--work-background);
+}
+
+body.about-page {
+    background-color: var(--about-background);
+}
