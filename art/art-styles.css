@@ -1,0 +1,383 @@
+/* Art Page Specific Styles */
+
+/* Art Page Background */
+body.art-page {
+    background-color: var(--art-background);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Home Link - moved to title section */
+
+.home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--art-text);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: var(--art-highlight);
+}
+
+.home-arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Main Content */
+.art-main-content {
+    padding: 0 3rem 3rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Art Title Section */
+.art-title-section {
+    text-align: left;
+    margin-bottom: 1rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 3rem 1rem 3rem;
+}
+
+.art-title-section .home-link {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.art-page-title {
+    font-family: 'Intro Rust', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--art-text);
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.1em;
+}
+
+.art-navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    color: var(--art-highlight);
+    font-weight: bold;
+}
+
+.nav-item:not(.active) {
+    color: var(--art-text);
+    font-weight: bold;
+}
+
+.nav-separator {
+    color: var(--art-text);
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+/* SECTION CONTAINERS */
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.5rem 3rem;
+}
+
+/* SECTION 1: BACKGROUND */
+.background-section {
+    margin-bottom: 2rem;
+}
+
+.background-content {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+.background-title-and-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.background-section .section-title {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.background-text {
+    text-align: left;
+}
+
+.background-image {
+    display: flex;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+.background-photo {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+    margin-left: 15px;
+    box-shadow: 0 4px 20px rgba(235, 121, 81, 0.2);
+    object-fit: cover;
+}
+
+/* SECTION 2: ART INSTAGRAM */
+.art-instagram-section {
+    margin-bottom: 4rem;
+    text-align: right;
+}
+
+.instagram-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.instagram-text {
+    text-align: left;
+}
+
+.instagram-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* SECTION 3: RECENT PAINTINGS */
+.recent-paintings-section {
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.painting-placeholder {
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(235, 121, 81, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.painting-placeholder:hover {
+    transform: translateY(-3px);
+}
+
+/* SECTION STYLES */
+.section-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--art-text);
+    margin: 0 0 0.5rem 0;
+}
+
+.section-text {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 1.1rem;
+    color: var(--art-highlight);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* IMAGE PLACEHOLDERS */
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+}
+
+.image-placeholder.small {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.social-link {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: grayscale(0%) brightness(1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .background-content,
+    .instagram-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .background-section .section-title {
+        text-align: center;
+    }
+    
+    .background-text {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .background-image {
+        justify-content: center;
+    }
+    
+    .instagram-content {
+        text-align: center;
+    }
+    
+    .art-instagram-section {
+        text-align: center;
+    }
+    
+    .instagram-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .art-title-section {
+        padding: 1.5rem 2rem 1rem 2rem;
+    }
+    
+    .art-main-content {
+        padding: 0 2rem 2rem 2rem;
+    }
+    
+    .section-container {
+        padding: 1rem 2rem;
+    }
+    
+    .art-page-title {
+        font-size: 3rem;
+    }
+    
+    .art-navigation {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-separator {
+        display: none;
+    }
+    
+    .paintings-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-text {
+        font-size: 1rem;
+    }
+    
+    .image-placeholder {
+        height: 250px;
+    }
+    
+    .social-links {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .art-title-section {
+        padding: 1rem 1.5rem 0.5rem 1.5rem;
+    }
+    
+    .art-main-content {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .section-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .art-page-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-text {
+        font-size: 0.95rem;
+    }
+    
+    .image-placeholder {
+        height: 200px;
+        font-size: 0.9rem;
+    }
+}

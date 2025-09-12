@@ -78,34 +78,56 @@ body {
 /* Header Styles */
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 2rem 3rem;
-    flex-wrap: wrap;
+    padding: 4rem 0 2rem 0;
+    gap: 1.5rem;
 }
 
 .name {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     letter-spacing: 0.1em;
     font-family: 'Intro Rust', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    display: flex;
+    gap: 0.05em;
 }
 
-.sarah {
+.name .letter {
+    display: inline-block;
+}
+
+.name .letter.space {
+    width: 0.3em;
+}
+
+.name .art-text {
     color: var(--art-text);
 }
 
-.luan {
+.name .work-text {
     color: var(--work-text);
+}
+
+.name .about-text {
+    color: var(--about-text);
 }
 
 .titles {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 500;
     font-family: 'Fredoka', 'Arial', sans-serif;
+}
+
+.software,
+.product-design,
+.consulting {
+    font-family: 'Fredoka', 'Arial', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 .software {
@@ -237,8 +259,8 @@ body {
 /* Circle Labels */
 .circle-label {
     margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: bold;
     font-family: 'Fredoka', 'Arial Rounded MT Bold', 'Arial', sans-serif;
     transition: color 0.3s ease;
 }
