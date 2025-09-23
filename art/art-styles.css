@@ -40,11 +40,11 @@ body.art-page {
 /* Art Title Section */
 .art-title-section {
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 3rem 1rem 3rem;
+    padding: 2rem 3rem 0 3rem;
 }
 
 .art-title-section .home-link {
@@ -102,6 +102,8 @@ body.art-page {
     padding: 0.5rem 3rem;
 }
 
+/* SCROLL ANIMATIONS - REMOVED */
+
 /* SECTION 1: BACKGROUND */
 .background-section {
     margin-bottom: 2rem;
@@ -109,7 +111,7 @@ body.art-page {
 
 .background-content {
     display: flex;
-    gap: 0;
+    gap: 100px;
     align-items: flex-start;
     margin-top: 0;
 }
@@ -148,7 +150,11 @@ body.art-page {
 /* SECTION 2: ART INSTAGRAM */
 .art-instagram-section {
     margin-bottom: 4rem;
+}
+
+.art-instagram-section .section-title {
     text-align: right;
+    margin-bottom: 2rem;
 }
 
 .instagram-content {
@@ -173,24 +179,74 @@ body.art-page {
     text-align: left;
 }
 
-.paintings-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+.recent-paintings-section .section-title {
+    margin-bottom: 1rem;
 }
 
-.painting-placeholder {
+.recent-paintings-section .section-text {
+    margin-bottom: 2rem;
+}
+
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 0;
+    max-width: 100%;
+}
+
+.painting-item {
+    position: relative;
     aspect-ratio: 1;
-    background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(235, 121, 81, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.painting-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(235, 121, 81, 0.3);
+}
+
+.painting-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.painting-placeholder:hover {
-    transform: translateY(-3px);
+.painting-item:hover .painting-image {
+    transform: scale(1.05);
+}
+
+.painting-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.painting-item:hover .painting-overlay {
+    opacity: 1;
+}
+
+.painting-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
 }
 
 /* SECTION STYLES */
@@ -330,8 +386,8 @@ body.art-page {
     }
     
     .paintings-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
     .section-title {

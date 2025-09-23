@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = new Image();
         img.src = imagePath;
     });
+
+    // Scroll animations removed - clean page ready for future work
 });
 
 // Function to handle page transitions (if needed for future enhancements)
