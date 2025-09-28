@@ -139,8 +139,9 @@ body.art-page {
 }
 
 .background-photo {
-    width: 400px;
-    height: auto;
+    margin-top: 10px;
+    height: 400px;
+    width: 600px;
     max-width: 100%;
     margin-left: 15px;
     box-shadow: 0 4px 20px rgba(235, 121, 81, 0.2);
@@ -150,27 +151,88 @@ body.art-page {
 /* SECTION 2: ART INSTAGRAM */
 .art-instagram-section {
     margin-bottom: 4rem;
+    position: relative;
 }
 
 .art-instagram-section .section-title {
     text-align: right;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .instagram-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
     gap: 3rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .instagram-text {
     text-align: left;
+    flex: 1;
+    padding-right: 2rem;
 }
 
 .instagram-image {
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+    flex-shrink: 0;
+}
+
+.instagram-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(235, 121, 81, 0.2);
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.instagram-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(235, 121, 81, 0.3);
+}
+
+.instagram-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.instagram-link:hover .instagram-photo {
+    transform: scale(1.05);
+}
+
+.instagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
     display: flex;
+    align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-link:hover .instagram-overlay {
+    opacity: 1;
+}
+
+.instagram-hover-text {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
 }
 
 /* SECTION 3: RECENT PAINTINGS */
@@ -347,15 +409,37 @@ body.art-page {
     }
     
     .instagram-content {
+        flex-direction: column;
+        gap: 2rem;
         text-align: center;
+        align-items: center;
     }
     
     .art-instagram-section {
         text-align: center;
+        position: static;
+    }
+    
+    .art-instagram-section .section-title {
+        text-align: center;
+        margin-bottom: 2rem;
     }
     
     .instagram-text {
         text-align: center;
+        padding-right: 0;
+    }
+    
+    .instagram-image {
+        position: static;
+        justify-content: center;
+        top: auto;
+        right: auto;
+    }
+    
+    .instagram-photo {
+        width: 180px;
+        height: 180px;
     }
 }
 
