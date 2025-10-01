@@ -150,33 +150,35 @@ body.art-page {
 
 /* SECTION 2: ART INSTAGRAM */
 .art-instagram-section {
+    margin-top: -1rem;
     margin-bottom: 4rem;
     position: relative;
 }
 
 .art-instagram-section .section-title {
     text-align: right;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .instagram-content {
-    margin-left: 15px;
     display: flex;
-    flex-direction: row;
     gap: 3rem;
     align-items: flex-start;
+    margin-top: 1rem;
 }
 
 .instagram-text {
     text-align: left;
-    flex: 1;
+    width: calc(100% - 250px);
     padding-right: 2rem;
 }
 
 .instagram-image {
     position: absolute;
-    top: 4rem;
-    right: 3rem;
+    top: 4.5rem;
+    right: 0;
+    transform: translateX(-50px);
+    width: fit-content;
     flex-shrink: 0;
 }
 
@@ -201,6 +203,7 @@ body.art-page {
     height: 200px;
     object-fit: cover;
     display: block;
+    border-radius: 30px;
     transition: transform 0.3s ease;
 }
 
@@ -432,9 +435,8 @@ body.art-page {
     
     .instagram-image {
         position: static;
-        justify-content: center;
-        top: auto;
         right: auto;
+        justify-content: center;
     }
     
     .instagram-photo {
